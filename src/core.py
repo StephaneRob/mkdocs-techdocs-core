@@ -38,7 +38,8 @@ class TechDocsCore(BasePlugin):
 
     def on_config(self, config):
         with open(
-            os.path.join(self.tmp_dir_techdocs_theme.name, "techdocs_metadata.json"),
+            os.path.join(self.tmp_dir_techdocs_theme.name,
+                         "techdocs_metadata.json"),
             "w+",
         ) as fp:
             fp.write(
@@ -109,7 +110,6 @@ class TechDocsCore(BasePlugin):
             "linenums": True,
             "pygments_lang_class": True,
         }
-        config["markdown_extensions"].append("pymdownx.extra")
         config["mdx_configs"]["pymdownx.betterem"] = {
             "smart_enable": "all",
         }
